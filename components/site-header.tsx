@@ -4,11 +4,10 @@ import { useState } from "react"
 import { Menu, X } from "lucide-react"
 
 const NAV_LINKS = [
-  { label: "Projects", href: "#projects" },
-  { label: "Blogs", href: "#blogs" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "About us", href: "#about" },
-  { label: "Contact us", href: "#contact" },
+  { label: "Projects", href: "/projects" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Journal", href: "/blog" },
+  { label: "About", href: "/about" },
 ]
 
 export function SiteHeader() {
@@ -17,7 +16,7 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
       <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-border/60 bg-cream/80 px-5 py-2.5 backdrop-blur-md">
-        <a href="#top" className="text-lg font-medium tracking-tight text-foreground">
+        <a href="/" className="text-lg font-medium tracking-tight text-foreground">
           Interiia
         </a>
 
@@ -35,10 +34,10 @@ export function SiteHeader() {
         </ul>
 
         <a
-          href="#contact"
+          href="/contact"
           className="hidden rounded-full bg-foreground px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 md:inline-block"
         >
-          Let&apos;s talk
+          Start a project
         </a>
 
         <button
@@ -68,11 +67,11 @@ export function SiteHeader() {
             ))}
             <li>
               <a
-                href="#contact"
+                href="/contact"
                 onClick={() => setOpen(false)}
                 className="mt-1 block rounded-full bg-foreground px-3 py-2.5 text-center text-sm font-medium text-primary-foreground"
               >
-                Let&apos;s talk
+                Start a project
               </a>
             </li>
           </ul>
