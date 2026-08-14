@@ -20,7 +20,6 @@ export function SitePreloader() {
       if (value < 100) {
         frame = requestAnimationFrame(tick)
       } else {
-        // Hold 100 briefly, then reveal the site with the same clean editorial feel.
         window.setTimeout(() => setLeaving(true), 180)
         window.setTimeout(() => setHidden(true), 850)
       }
@@ -37,7 +36,7 @@ export function SitePreloader() {
       className={`site-preloader ${leaving ? "is-leaving" : ""}`}
       aria-hidden="true"
     >
-      <div className="site-preloader__name">Interiia</div>
+      <div className="site-preloader__name">Mridha</div>
 
       <div className="site-preloader__line" aria-hidden="true">
         <span style={{ transform: `scaleX(${progress / 100})` }} />
