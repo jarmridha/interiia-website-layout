@@ -1,4 +1,5 @@
 import { SiteHeader } from "@/components/site-header"
+import { CustomCursor } from "@/components/custom-cursor"
 import { Hero } from "@/components/hero"
 import { Introduction } from "@/components/introduction"
 import { WhatWeDo } from "@/components/what-we-do"
@@ -12,6 +13,7 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-[#f5f1e8]">
       <SiteHeader />
+      <CustomCursor />
       <main>
         <Hero />
         <Introduction />
