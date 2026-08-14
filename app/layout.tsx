@@ -9,14 +9,14 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: 'Interiia — Award-Winning Interior Design Studio',
+  title: 'Mridha Construction and Consultancy — Trusted Expertise. Professional Execution. Lasting Value.',
   description:
-    'Interiia designs spaces that are tactile, considered, and built around how life actually happens. A studio-based interior design practice in Toronto.',
-  generator: 'v0.app',
+    'Mridha Construction and Consultancy is a professional construction and engineering company delivering reliable, quality-driven, and value-focused solutions across Bangladesh since 2019.',
+  generator: 'Next.js',
 }
 
 export const viewport: Viewport = {
-  themeColor: '#f6f2ea',
+  themeColor: '#f5f1e8',
   colorScheme: 'light',
 }
 
