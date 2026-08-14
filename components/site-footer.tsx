@@ -1,121 +1,35 @@
 import { ArrowUpRight } from "lucide-react"
 
-const SITEMAP = [
-  { label: "Home", href: "#top" },
-  { label: "Projects", href: "#projects" },
-  { label: "Blogs", href: "#blogs" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "About us", href: "#about" },
-  { label: "Contact us", href: "#contact" },
-]
-
-const SOCIALS = [
-  { label: "Instagram", href: "#" },
-  { label: "TikTok", href: "#" },
-  { label: "LinkedIn", href: "#" },
-  { label: "X", href: "#" },
-]
+const SITEMAP = ["Home", "Projects", "Blogs", "Gallery", "About us", "Contact us"]
 
 export function SiteFooter() {
   return (
-    <footer id="contact" className="px-4 pb-4">
-      <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl bg-ink text-cream">
-        {/* CTA */}
-        <div className="relative">
-          <img
-            src="/images/cta-sofa.png"
-            alt="A plush cream boucle sofa on warm oak flooring"
-            className="h-64 w-full object-cover md:h-80"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
-          <div className="absolute inset-0 flex items-end p-6 md:p-12">
-            <div className="max-w-xl">
-              <h2 className="text-balance text-3xl font-medium tracking-tight sm:text-4xl">
-                Build your dream space with us
-              </h2>
-              <p className="mt-3 text-sm leading-relaxed text-cream/70">
-                Interiia is a studio-based interior design practice helping
-                homeowners and businesses shape spaces around how they actually
-                live, work, and feel.
-              </p>
-              <a
-                href="mailto:studio@interiia.com"
-                className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-cream px-5 py-3 text-sm font-medium text-ink transition-opacity hover:opacity-90"
-              >
-                Contact us
-                <ArrowUpRight className="h-4 w-4" />
-              </a>
-            </div>
-          </div>
+    <footer className="bg-[#242424] text-white">
+      <section className="relative h-[375px] overflow-hidden">
+        <img src="/images/cta-sofa.png" alt="Warm interior" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-black/15" />
+        <div className="absolute left-6 top-12 w-[400px] bg-[#242424] p-6 md:left-12 md:top-12">
+          <h2 className="text-[38px] leading-[1.05] tracking-[-.045em]">Build your dream<br />space with us</h2>
+          <p className="mt-7 max-w-[330px] text-[13px] font-semibold leading-[1.3] text-white/75">Interiia is a studio-based interior design practice helping homeowners and businesses shape spaces around how they actually live, work, and feel.</p>
+          <a href="/contact" className="mt-7 inline-flex items-center gap-3 rounded-[3px] bg-[#f5f1e8] px-3 py-2 text-[12px] text-black">Contact us <ArrowUpRight className="h-3.5 w-3.5" /></a>
+        </div>
+      </section>
+
+      <section className="px-6 py-8 md:px-12">
+        <div className="grid gap-10 md:grid-cols-3">
+          <div><p className="border-b border-white/20 pb-4 text-[11px] font-semibold">Sitemap</p><div className="pt-4 flex flex-col gap-2 text-[14px] font-semibold">{SITEMAP.map(x => <a key={x} href={x === "Home" ? "/" : `/${x.toLowerCase().replace(" ", "")}`}>{x}</a>)}</div></div>
+          <div><p className="border-b border-white/20 pb-4 text-[11px] font-semibold">Visit</p><p className="pt-4 text-[14px] font-semibold leading-[1.45]">42 Riverside Lane, Studio<br />3, Toronto, ON M5V 2T6</p></div>
+          <div><p className="border-b border-white/20 pb-4 text-[11px] font-semibold">Work With Us</p><a href="mailto:uxridham@gmail.com" className="block pt-4 text-[14px] font-semibold">uxridham@gmail.com</a></div>
         </div>
 
-        {/* Links */}
-        <div className="grid gap-10 border-t border-cream/10 p-6 md:grid-cols-3 md:p-12">
-          <div className="flex flex-col gap-3">
-            <p className="text-xs uppercase tracking-widest text-cream/50">
-              Sitemap
-            </p>
-            <ul className="flex flex-col gap-2">
-              {SITEMAP.map((item) => (
-                <li key={item.label}>
-                  <a
-                    href={item.href}
-                    className="text-sm text-cream/80 transition-colors hover:text-cream"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <p className="text-xs uppercase tracking-widest text-cream/50">
-              Visit
-            </p>
-            <p className="text-sm leading-relaxed text-cream/80">
-              42 Riverside Lane, Studio 3,
-              <br />
-              Toronto, ON M5V 2T6
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <p className="text-xs uppercase tracking-widest text-cream/50">
-              Work With Us
-            </p>
-            <a
-              href="mailto:studio@interiia.com"
-              className="text-sm text-cream/80 transition-colors hover:text-cream"
-            >
-              studio@interiia.com
-            </a>
-            <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
-              {SOCIALS.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="text-sm text-cream/60 transition-colors hover:text-cream"
-                >
-                  {social.label}
-                </a>
-              ))}
-            </div>
-          </div>
+        <div className="mt-10 border-t border-white/20 pt-14">
+          <div className="overflow-hidden text-[31vw] leading-[.72] tracking-[-.07em] text-white md:text-[24vw]">Interiia</div>
         </div>
-
-        {/* Wordmark */}
-        <div className="px-6 pb-2 md:px-12">
-          <p className="w-full text-center text-[22vw] font-medium leading-none tracking-tight text-cream md:text-[16vw]">
-            Interiia
-          </p>
+        <div className="mt-16 flex items-center justify-between border-t border-white/20 pt-4 text-[10px] font-semibold">
+          <div className="flex gap-6"><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">LinkedIn</a><a href="#">X</a></div>
+          <div>© {new Date().getFullYear()} Interiia Studio Inc.</div>
         </div>
-
-        <div className="flex flex-col gap-2 border-t border-cream/10 p-6 text-xs text-cream/50 sm:flex-row sm:items-center sm:justify-between md:px-12">
-          <p>© {new Date().getFullYear()} Interiia Studio Inc.</p>
-          <p>Crafted with care in Toronto.</p>
-        </div>
-      </div>
+      </section>
     </footer>
   )
 }
