@@ -16,6 +16,7 @@ concurrency:
 
 env:
   GITHUB_PAGES: "true"
+  NEXT_PUBLIC_BASE_PATH: "/interiia-website-layout"
 
 jobs:
   build:
