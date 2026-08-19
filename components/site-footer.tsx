@@ -1,38 +1,7 @@
 import { ArrowUpRight } from "lucide-react"
 
-const SITEMAP = ["Home", "Projects", "Blogs", "Gallery", "About us", "Contact us"]
+const SITEMAP = [["Home","/"],["Projects","/projects"],["Blogs","/blog"],["Gallery","/gallery"],["About us","/about"],["Contact us","/contact"]]
 
 export function SiteFooter() {
-  return (
-    <footer className="bg-[#242424] text-white">
-      <section className="relative h-[375px] overflow-hidden">
-        <img src="/images/cta-sofa.png" alt="Mridha Construction and Consultancy project" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-black/25" />
-        <div className="absolute left-6 top-12 w-[420px] max-w-[calc(100%-3rem)] bg-[#242424] p-6 md:left-12 md:top-12">
-          <h2 className="text-[38px] leading-[1.05] tracking-[-.045em]">Build with confidence.<br />Build for the future.</h2>
-          <p className="mt-7 max-w-[350px] text-[13px] font-semibold leading-[1.4] text-white/75">Mridha Construction and Consultancy delivers professional construction, renovation, fit-out, and engineering consultancy solutions across Bangladesh.</p>
-          <a href="/contact" className="mt-7 inline-flex items-center gap-3 rounded-[3px] bg-[#f5f1e8] px-3 py-2 text-[12px] text-black">Contact us <ArrowUpRight className="h-3.5 w-3.5" /></a>
-        </div>
-      </section>
-
-      <section className="px-6 py-8 md:px-12">
-        <div className="grid gap-10 md:grid-cols-3">
-          <div><p className="border-b border-white/20 pb-4 text-[11px] font-semibold">Sitemap</p><div className="pt-4 flex flex-col gap-2 text-[14px] font-semibold">{SITEMAP.map(x => <a key={x} href={x === "Home" ? "/" : `/${x.toLowerCase().replace(" ", "")}`}>{x}</a>)}</div></div>
-          <div><p className="border-b border-white/20 pb-4 text-[11px] font-semibold">Our Service Area</p><p className="pt-4 text-[14px] font-semibold leading-[1.45]">Bangladesh<br />Construction · Engineering · Consultancy</p></div>
-          <div><p className="border-b border-white/20 pb-4 text-[11px] font-semibold">Work With Us</p><a href="/contact" className="block pt-4 text-[14px] font-semibold">Start a project with Mridha C&amp;C</a></div>
-        </div>
-
-        <div className="mt-10 border-t border-white/20 pt-14">
-          <div className="flex items-center gap-4 overflow-hidden">
-            <img src="/mridha-logo.svg" alt="Mridha Construction and Consultancy" className="h-20 w-20 shrink-0 rounded-full object-cover md:h-28 md:w-28" />
-            <div className="overflow-hidden text-[18vw] leading-[.72] tracking-[-.07em] text-white md:text-[15vw]">Mridha</div>
-          </div>
-        </div>
-        <div className="mt-16 flex items-center justify-between border-t border-white/20 pt-4 text-[10px] font-semibold">
-          <div>Trusted Expertise · Professional Execution · Lasting Value</div>
-          <div>© {new Date().getFullYear()} Mridha Construction and Consultancy</div>
-        </div>
-      </section>
-    </footer>
-  )
+  return <footer className="bg-[#242424] text-white"><section className="relative h-[375px] overflow-hidden"><img src="/images/cta-sofa.png" alt="Mridha Construction and Consultancy project" className="absolute inset-0 h-full w-full object-cover" /><div className="absolute inset-0 bg-black/25" /><div className="absolute left-6 top-12 w-[420px] max-w-[calc(100%-3rem)] bg-[#242424] p-6 md:left-12 md:top-12"><h2 className="text-[38px] leading-[1.05] tracking-[-.045em]">Build with confidence.<br />Build for the future.</h2><p className="mt-7 max-w-[350px] text-[13px] font-semibold leading-[1.4] text-white/75">Mridha Construction and Consultancy delivers professional construction, renovation, fit-out, and engineering consultancy solutions across Bangladesh.</p><a href="/contact" className="mt-7 inline-flex items-center gap-3 rounded-[3px] bg-[#f5f1e8] px-3 py-2 text-[12px] text-black">Contact us <ArrowUpRight className="h-3.5 w-3.5" /></a></div></section><section className="px-6 py-8 md:px-12"><div className="grid gap-10 md:grid-cols-3"><div><p className="border-b border-white/20 pb-4 text-[11px] font-semibold">Sitemap</p><div className="pt-4 flex flex-col gap-2 text-[14px] font-semibold">{SITEMAP.map(([label,href]) => <a key={href} href={href}>{label}</a>)}</div></div><div><p className="border-b border-white/20 pb-4 text-[11px] font-semibold">Our Service Area</p><p className="pt-4 text-[14px] font-semibold leading-[1.45]">Bangladesh<br />Construction · Engineering · Consultancy</p></div><div><p className="border-b border-white/20 pb-4 text-[11px] font-semibold">Work With Us</p><a href="/contact" className="block pt-4 text-[14px] font-semibold">Start a project with Mridha C&amp;C</a></div></div><div className="mt-10 border-t border-white/20 pt-14"><div className="flex items-center gap-4 overflow-hidden"><img src="/mridha-logo.svg" alt="Mridha Construction and Consultancy" className="h-20 w-20 shrink-0 rounded-full object-cover md:h-28 md:w-28" /><div className="overflow-hidden text-[18vw] leading-[.72] tracking-[-.07em] text-white md:text-[15vw]">Mridha</div></div></div><div className="mt-16 flex items-center justify-between border-t border-white/20 pt-4 text-[10px] font-semibold"><div>Trusted Expertise · Professional Execution · Lasting Value</div><div>© {new Date().getFullYear()} Mridha Construction and Consultancy</div></div></section></footer>
 }
